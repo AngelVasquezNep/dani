@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      form#create-twitt-form {
+        max-width: 100%;
+      }
+      form#create-twitt-form .content {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .twitt {
+        border: 1px solid gray;
+        border-radius: 0.5rem;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        margin: 1rem 0;
+      }
+      .twitt .twitte-message {
+        margin: 0.5rem 0;
+      }
+      .warning {
+        color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Post like Twitter</h1>
+      <form id="create-twitt-form">
+        <textarea
+          type="text"
+          name="twitt"
+          id="twitt-input"
+          class="content"
+          rows="10"
+        ></textarea>
+        <small class="warning"></small>
+        <br />
+        <button id="create-button" type="submit">Create</button>
+      </form>
+
+      <div class="twittes-container" id="twittes"></div>
+    </main>
+
+    <script>
+      const MAX_TWITT_SIZE = 50;
+
+      const $form = document.getElementById("create-twitt-form");
+      const $twittInput = document.getElementById("twitt-input");
+      const $twittButton = document.getElementById("create-button");
+      const $warning = $form.querySelector(".warning");
+
+      $twittButton.disabled = true;
+
+      function renderTwittes() {
+        const twittes = [];
+        const $twittesContainer = document.getElementById("twittes");
+
+        const $twitteBase = document.createElement("div");
+        $twitteBase.setAttribute("class", "twitt");
+        $twitteBase.innerHTML = `
+          <div class="content">
+            
+          </div>
+        `;
+
+        return function renderNewTwitte(newTwitte) {
+          twittes.push(newTwitte);
+
+          const $newTwitte = $twitteBase.cloneNode();
+          $newTwitte.innerHTML = `
+            <h1 class="twitte-message">
+              ${newTwitte.twitt}
+            </h1>
+            <small>
+              ${new Date(newTwitte.createdAt)}
+            </small>
+          `;
+
+          $twittesContainer.appendChild($newTwitte);
+        };
+      }
+
+      const renderNewTwitte = renderTwittes();
+
+      $form.addEventListener("submit", (event) => {
+        const formData = new FormData($form);
+
+        const twitt = formData.get("twitt");
+
+        console.log({ twitt, createdAt: new Date().getTime() });
+
+        $warning.textContent = "";
+        $twittInput.value = "";
+        $twittButton.disabled = true;
+
+        renderNewTwitte({ twitt, createdAt: new Date().getTime() });
+
+        event.preventDefault();
+      });
+
+      $twittInput.addEventListener("input", (event) => {
+        const twitt = event.target.value;
+
+        const twittSize = twitt.length;
+
+        if (twittSize >= MAX_TWITT_SIZE) {
+          $warning.textContent = "Máx size reached";
+
+          $twittInput.value = twitt.slice(0, MAX_TWITT_SIZE);
+        } else {
+          $warning.textContent = `${twittSize} / ${MAX_TWITT_SIZE}`;
+          $twittInput.value = twitt;
+        }
+
+        console.log({ twitt })
+
+        $twittButton.disabled = Boolean(!twitt || twitt.length === 0)
+      });
+    </script>
+  </body>
+</html>
