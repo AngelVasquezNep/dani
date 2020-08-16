@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-container {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .post-container {
+        border-radius: 0.5rem;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .post-container .avatar {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+      }
+      
+      .post-container .name {
+        margin: 0;
+      }
+      .post-container img.image-post {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main-container">
+      <h1>Dogs</h1>
+
+      <div id="container" class="container">
+      </div>
+    </main>
+
+    <script src="dogs2.js">
+    </script>
+  </body>
+</html>
