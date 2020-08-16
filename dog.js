@@ -67,8 +67,8 @@ dogs.forEach(function (dogImage, index) {
 });
 
 document.addEventListener("mousemove", (event) => {
-  // $imageHover.style.left = `${event.screenX}px`;
-  // $imageHover.style.top = `${event.screenY}px`;
+  $imageHover.style.left = `${event.screenX}px`;
+  $imageHover.style.top = `${event.screenY}px`;
 });
 
 $container.addEventListener("mouseover", (event) => {
