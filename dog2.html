@@ -15,6 +15,18 @@
         padding: 0;
       }
 
+      .header {
+        max-width: 300px;
+        display: flex;
+        align-items: center;
+        padding: 0.4rem;
+        /* border: 1px solid red; */
+      }
+
+      p {
+        padding-left: 10px;
+      }
+
       .main-container {
         max-width: 300px;
         margin: 0 auto;
@@ -29,6 +41,7 @@
         border-radius: 0.5rem;
         width: 100%;
         margin-bottom: 1rem;
+        border: 1px solid #efefef;
       }
 
       .post-container .avatar {
@@ -43,18 +56,50 @@
       .post-container img.image-post {
         width: 100%;
         max-width: 100%;
-        border-radius: 0.5rem;
       }
+
+      .iconos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        max-width: 300px;
+        height: 50px;
+        padding: 0 0.4rem;
+        /* border: 1px solid blue; */
+      }
+
+      .iconos .iconos_left {
+        display: flex;
+        width: 100%;
+        height: auto;
+      }
+
+      .iconos .iconos_right {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: auto;
+      }
+
+      .iconos_left img {
+        width: 25px;
+        height: 20px;
+      }
+
+      .iconos_right img {
+        width: 25px;
+        height: 20px;
+      }
+
+
+
     </style>
   </head>
   <body>
     <main class="main-container">
-      <h1>Dogs</h1>
-
       <div id="container" class="container">
       </div>
     </main>
-
     <script src="dogs2.js">
     </script>
   </body>
