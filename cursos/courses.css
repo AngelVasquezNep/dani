@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2edfc;
+}
+
+.container {
+  padding: 20px;
+  max-width: 320px;
+  height: 700px;
+  height: auto;
+  margin: 0 auto;
+  background: white;
+  border-radius: 25px;
+  /* border: 1px solid red; */
+}
+
+.contenido {
+  max-width: 100%;
+  height: auto;
+  /* border: 1px solid green; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  padding: 8px 0;
+  /* border: 1px solid purple; */
+}
+
+main {
+  width: 100%;
+  height: 460px;
+  height: auto;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 20px;
+  /* border: 1px solid blue; */
+}
+
+.text {
+  width: 70%;
+  height: inherit;
+  /* background: yellow; */
+}
+
+.icono {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+  align-items: center;
+  width: 30%;
+  height: inherit;
+  padding-right: 10px;
+  /* background: cyan; */
+}
+
+p {
+  margin: 0;
+  font-size: 40px;
+  padding-top: 25px;
+  color: #353772;
+}
+
+.cursos {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  height: 80px;
+  background: white;
+  border: 1px solid #e3e9f0;
+  border-radius: 15px;
+  margin-bottom: 15px; 
+  padding: 5px;
+}
+
+.izquierda {
+  width: 25%;
+  height: 70px;
+  /* background: blueviolet; */
+}
+
+.izquierda img {
+  border-radius: 15px;
+  width: 100%;
+  height: 70px;
+}
+
+.centro {
+  width: 50%;
+  height: 70px;
+  padding-top: 8px;
+  /* background: teal; */
+}
+
+.centro p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.derecha {
+  width: 25%;
+  height: 70px;
+  /* background: red; */
+}
+
+.derecha .derecha_contenido {
+  border-radius: 15px;
+  width: 100%;
+  height: 70px;
+  background: #f0f3f8;
+}
+
+.derecha_contenido p {
+  padding-top: 15px;
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+
+}
+
+.cursos:hover {
+  background: #35409c;
+  color: #fff;
+  box-shadow: 1px 13px 40px 15px #c6c9e2;
+}
+
+
