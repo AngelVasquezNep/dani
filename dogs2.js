@@ -51,26 +51,50 @@ const dogs = [
   "https://images.dog.ceo/breeds/rottweiler/n02106550_10478.jpg",
 ];
 
+
+const icons = {
+  corazon: "./iconos/corazon.svg",
+  comentario: "./iconos/comentario.svg",
+  avion: "./iconos/avion.svg",
+  guardar: "./iconos/guardar.svg"
+};
+
 const $container = document.getElementById("container");
 
+
 dogs.forEach(function (dogImage, index) {
-  const div = document.createElement("div");
+  const tarjeta = document.createElement("div");
+  // const $iconos = document.createElement("div");
+  
+  tarjeta.className = "post-container";
 
-  div.className = "post-container";
-
-  div.innerHTML = `
-    <img class="avatar" src=${dogImage} alt="">
-    <p class="name">Perrito ${index}</p>
+  
+  tarjeta.innerHTML = `
+    <div class="header">
+      <img class="avatar" src=${dogImage} alt="">
+      <p class="name">Dominando el DOM</p>
+    </div>
     <img class="image-post" src=${dogImage} alt="">
+
+    <div class="iconos">
+      <div class="iconos_left">
+        <img src=${icons.corazon} >
+        <img src=${icons.comentario}>
+        <img src=${icons.avion}>
+      </div>
+      <div class="iconos_right">
+        <img src=${icons.guardar}>       
+      </div>
+    </div>
   `;
 
-  $container.appendChild(div);
+  // $iconos.className ="iconos"
+  // $iconos.innerHTML= `
+  //   iconos desd container
+  // `
+  
+  // tarjeta.appendChild($iconos);
+  $container.appendChild(tarjeta);
 });
 
-const courses = [
-  {
-    name: "curso 1",
-    image: "https://images.dog.ceo/breeds/brabancon/n02112706_2391.jpg",
-    lessons: 50,
-  },
-];
+
