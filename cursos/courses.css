@@ -106,6 +106,15 @@ img {
   height: 70px;
 }
 
+.centro {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  width: 50%;
+  height: 70px;
+  /* border: 1px solid red; */
+}
+
 .derecha {
   width: 25%;
   height: 70px;
