@@ -86,6 +86,7 @@ img {
   border-radius: 15px;
   margin-bottom: 15px; 
   padding: 5px;
+  transition: all 0.3s;
 }
 
 .cursos p {
@@ -128,12 +129,23 @@ img {
   color: #353772
 }
 
-.cursos:hover {
+.cursos:hover{
   background-color: #35409c;
   color: #fff;
   box-shadow: 1px 13px 40px 15px #c6c9e2;
   cursor: pointer;
 }
+
+.cursos:hover .derecha_contenido{
+  background: #0c1972;
+  color: white;
+  cursor: pointer;
+}
+
+.cursos:hover .derecha_contenido p{
+  color: white;
+}
+
 
 
 
