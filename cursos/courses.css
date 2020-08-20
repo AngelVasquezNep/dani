@@ -11,8 +11,8 @@ body {
 .container {
   padding: 20px;
   max-width: 320px;
-  height: 700px;
   height: auto;
+  height: 700px;
   margin: 0 auto;
   background: white;
   border-radius: 25px;
@@ -70,16 +70,15 @@ img {
   /* background: cyan; */
 }
 
-p {
-  margin: 0;
+.text p {
   font-size: 40px;
-  padding-top: 25px;
   color: #353772;
 }
 
 .cursos {
   display: flex;
-  align-content: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 80px;
   background: white;
@@ -87,6 +86,11 @@ p {
   border-radius: 15px;
   margin-bottom: 15px; 
   padding: 5px;
+}
+
+.cursos p {
+  font-size: 15px;
+  margin: 0;
 }
 
 .izquierda {
@@ -101,18 +105,6 @@ p {
   height: 70px;
 }
 
-.centro {
-  width: 50%;
-  height: 70px;
-  padding-top: 8px;
-  /* background: teal; */
-}
-
-.centro p {
-  text-align: center;
-  font-size: 18px;
-}
-
 .derecha {
   width: 25%;
   height: 70px;
@@ -120,6 +112,9 @@ p {
 }
 
 .derecha .derecha_contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
   width: 100%;
   height: 70px;
@@ -127,17 +122,20 @@ p {
 }
 
 .derecha_contenido p {
-  padding-top: 15px;
   text-align: center;
   font-size: 18px;
   margin: 0;
-
+  color: #353772
 }
 
 .cursos:hover {
-  background: #35409c;
+  background-color: #35409c;
   color: #fff;
   box-shadow: 1px 13px 40px 15px #c6c9e2;
+  cursor: pointer;
 }
+
+
+
 
 
