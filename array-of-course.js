@@ -1,28 +1,25 @@
+// export const hola = "HOLA"
+
 const courses = [
   {
     name: 'Design Thinking',
-    image: 'put some image',
+    image: 'img/dan.png',
     lessons: 15,
   },
   {
     name: 'UI design',
-    image: 'put some image',
+    image: 'img/dan_el_curioso(4).png',
     lessons: 30,
   },
   {
     name: 'UX design',
-    image: 'put some image',
+    image: 'img/dan_el_curioso.png',
     lessons: 22,
   },
   {
     name: 'Digital Design',
-    image: 'put some image',
+    image: 'img/dan_el_curioso(5).png',
     lessons: 25,
-  },
-  {
-    name: 'UI Interactions',
-    image: 'put some image',
-    lessons: 15,
   },
 ]
 
