@@ -1,0 +1,8 @@
+{
+  "name": "CRUD",
+  "version": "0.1.0",
+  "description": "A simple CRUD app",
+  "main": "index.js",
+  "author": "Angelito <angel.vasquez.unam@gmail.com> (https://github.com/AngelVasquezNep)",
+  "license": "MIT"
+}
