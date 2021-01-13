@@ -1,0 +1,9 @@
+{
+  "name": "dani",
+  "version": "0.1.0",
+  "description": "Some projects with my brother",
+  "main": "index.js",
+  "repository": "git@github.com:AngelVasquezNep/dani.git",
+  "author": "Angelito <angel.vasquez.unam@gmail.com> (https://github.com/AngelVasquezNep)",
+  "license": "MIT"
+}
