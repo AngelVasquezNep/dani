@@ -29,9 +29,11 @@ const create = (user) => {
 };
 
 const update = (user) => {
-  const users = data.users.map(({ id, ...rest }) =>
-    id === user.id ? user : { id, ...rest }
-  );
+  if (!find(user.id)) {
+    return "User not found";
+  }
+
+  const users = data.users.map(({ id, ...rest }) => (id === user.id ? user : { id, ...rest }));
 
   save(users);
 
@@ -39,6 +41,10 @@ const update = (user) => {
 };
 
 const deleteUser = (userId) => {
+  if (!find(userId)) {
+    return "User not found";
+  }
+
   const users = data.users.filter(({ id }) => id !== userId);
   save(users);
 
@@ -49,7 +55,14 @@ const all = () => {
   return data.users;
 };
 
+const find = (userId) => {
+  const user = data.users.find((user) => user.id === userId);
+
+  return user;
+};
+
 module.exports = {
+  find,
   create,
   update,
   all,
