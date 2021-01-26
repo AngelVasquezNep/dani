@@ -1,5 +1,5 @@
 const User = require("./users");
-const utils = require('./utils')
+const utils = require("./utils");
 
 const [runtime, fileNane, option, argument, ...restArguments] = process.argv;
 
@@ -14,6 +14,7 @@ function printHelp() {
     -u, --update            Update a user [pass userId as argument]
     -d, --delete            Delete a user [pass userId as argument]
     -l, --list              List all users
+    -f, --find              Find a user [pass userId as argument]
   `);
 
   process.exit(0);
@@ -62,4 +63,10 @@ if (option === "-d" || option === "--delete") {
   const users = User.delete(argument);
 
   console.log(users);
+}
+
+if (option === "-f" || option === "--find") {
+  const user = User.find(argument);
+
+  console.log(user || "User not found");
 }
